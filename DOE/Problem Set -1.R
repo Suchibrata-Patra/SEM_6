@@ -73,16 +73,29 @@ drill = c("D1","D3","D4","D1","D5","D2","D5","D3","D2","D4","D1","D2","D5","D4",
 data = data.frame(time,drill)
 oneway = aov(time~as.factor(drill),data=data)
 summary(oneway)
-yi0.bar=aggregate(time~as.factor(drill),data=data,mean)$time;yi0.bar
-n=aggregate(time~as.factor(drill),data=data,length)$time;n
+qf(0.95,4,15)
+# Pairwise Testing Procedure
+yi0_bar = numeric(5)
+n = numeric(5)
+drills = unique(sort(drill))
+for(i in 1:5){
+  yi0_bar[i] = mean(data$time[which(drill==drills[i])])
+  n[i] = length(data$time[which(drill==drills[i])])
+}
 T=array(0);k=1;len=5
-
-for(i in 1:(len-1)){for(j in (i+1):len){
-  T[k]=(yi0.bar[i]-yi0.bar[j])/sqrt(9.04*((1/n[i])+(1/n[j])))
-  k=k+1}}
+treatment_1 = array()
+treatment_2 = array()
+for(i in 1:4){
+  for(j in (i+1):4){  # Iterate from (i+1) to 4
+    T[k] = (yi0_bar[i] - yi0_bar[j]) / sqrt(9.04 * ((1/n[i]) + (1/n[j])))
+    treatment_1[k] = i
+    treatment_2[k] = j
+    k = k + 1
+  }
+}
 T;qt(.975,15)
 d=ifelse(abs(T)>qt(0.975,15),"Reject","Accept")
-data.frame(T,d)
+data.frame(treatment_1,treatment_2,T,d)
 
 
 
