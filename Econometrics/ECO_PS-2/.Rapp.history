@@ -1,0 +1,356 @@
+file.choose()
+#Question NO - 01#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+data
+attach(data)
+model = glm(GMP~Money_Supply)
+attach(data)
+detach(data)
+detach(data)
+detach(data)
+#Question NO - 01#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GMP~Money_Supply)#
+detach(data)
+data
+data$GMP
+#Question NO - 01#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+detach(data)
+#Question NO - 01#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)
+rm(list=ls())
+file.choose()
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")
+data
+model = glm(Y~X)
+model = glm(y~X)
+attach(data)
+model = glm(Y~X)
+summary(model)
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+model = glm(Y~X)#
+summary(model)#
+detach(data)
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+model = glm(Y~X)#
+summary(model)#
+detach(data)
+data
+rm(list=ls())
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")
+data
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)
+rm(list=ls())
+file.choose()
+Ps-2_Qno_1.csv")
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2
+Ps-2_Qno_1.csv")
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2#
+Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+data = c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1, 100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)
+data
+length(data)
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)
+model = glm(y~x)
+summary(model)
+plot(model)
+plot(x,y)
+plot(x,y,col="RED")
+plot(x,y,col="RED",lty=2)
+plot(x,y,col="RED",lty=3)
+plot(x,y,col="RED",type="b")
+plot(x,y,col="RED",type="a")
+plot(x,y,col="RED",type="c")
+plot(x,y,col="RED",type="d")
+plot(x,y,col="RED",type="e")
+plot(x,y,col="RED",type="f")
+plot(x,y,col="RED",type="g")
+plot(x,y,col="RED",type="h")
+plot(x,y,col="RED",type="i")
+plot(x,y,col="RED",type="o")
+plot(x,y,col="RED",type="p")
+plot(x,y,col="RED",type="x")
+plot(x,y,col="RED",type="z")
+plot(x,y,col="RED",type="m")
+plot(x,y,col="RED",type="type[i]")
+plot(x,y,col="RED",type=%type[i]%)
+plot(x,y,col="RED",type=%type[i]%)
+type=c("h")
+plot(x,y,col="RED",type=%type[i]%)
+plot(x,y,col="RED",type=%type[1]%)
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)#
+model = glm(y~x)#
+summary(model)#
+plot(model)#
+type=c("h")#
+plot(x,y,col="RED",type=%type[1]%)
+plot(model)
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)#
+model = glm(y~x)#
+summary(model)#
+plot(model)#
+type=c("h")#
+plot(x,y,col="RED",type=%type[1]%)
+plot(model)
+plot(model)
+plot(model)
+plot(model)
+mumodel
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)#
+model = lm(y~x)#
+summary(model)#
+plot(model)#
+type=c("h")#
+plot(x,y,col="RED",type=%type[1]%)
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)#
+model = lm(y~x)#
+summary(model)#
+plot(x,y,cp;="RED")
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)#
+model = lm(y~x)#
+summary(model)#
+plot(x,y,color="RED")
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)#
+model = lm(y~x)#
+summary(model)#
+plot(x,y,col="RED")
+plot(x,y,col="RED",type="l")
+#Question NO - 01#
+rm(list=ls())#
+data  = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
+attach(data)#
+model = glm(GNP~Money_Supply)#
+summary(model)#
+detach(data)#
+#Question NO - 02#
+rm(list=ls())#
+data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
+attach(data)#
+Z = 100/(100-Y)#
+W = (1/X)#
+model = glm(Z~W)#
+summary(model)#
+detach(data)#
+#Question NO - 03#
+rm(list=ls())#
+x=c(172.8,166.0,199.9,164.4,168.8,165.2,170.0,163.5,169.4,167.8,160.3,164.4,161.2,164.0,159.1)#
+y = c(100.9,83.6,81.3,85.4,83.9,81.1,84.9,81.1,84.9,82.7,78.1,85.4,81.7,80.9,79.6)#
+model = lm(y~x)#
+summary(model)#
+plot(x,y,col="RED")
