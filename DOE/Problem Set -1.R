@@ -7,25 +7,18 @@ treatment = data[random_no]
 Design_Matrix = matrix(treatment,nrow=3,byrow=TRUE)
 Design_Matrix
 
+
 #Block No - 02
 rm(list=ls())
 set.seed(123)
-block = matrix(nrow=4, ncol=5)
+Design_matrix = matrix(nrow=4, ncol=5)
 treatment = c("A","B","C","D","E")
 for(i in 1:4){
-  block[i,] = sample(treatment, 5, replace=FALSE)
+  Design_matrix[i,] = sample(treatment, 5, replace=FALSE)
 }
 print(block)
 
-> print(block)
-[,1] [,2] [,3] [,4] [,5]
-[1,] "C"  "B"  "E"  "D"  "A" 
-[2,] "C"  "A"  "B"  "E"  "D" 
-[3,] "B"  "C"  "A"  "D"  "E" 
-[4,] "A"  "D"  "E"  "C"  "B" 
-
-
-
+#Alternative Code for the Above 
 rm(list=ls())
 set.seed(123)
 block_1 = sample(c("A","B","C","D","E"),5)
