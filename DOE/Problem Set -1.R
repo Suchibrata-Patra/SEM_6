@@ -1,5 +1,5 @@
 # ===============
-# Block no - 01
+# Question No - 01
 # ===============
 rm(list=ls())
 set.seed(123)
@@ -10,7 +10,7 @@ Design_Matrix = matrix(treatment,nrow=3,byrow=TRUE)
 Design_Matrix
 
 # ===============
-# Block No - 02
+# Question No - 02
 # ===============
 rm(list=ls())
 set.seed(123)
@@ -162,3 +162,7 @@ decision = ifelse(abs(t_obs)>qt(0.975,42),"Reject","Accept")
 data.frame(t_obs,decision)
 detach(OrchardSprays)
 
+
+# ===============
+# Question no - 07
+# ===============
