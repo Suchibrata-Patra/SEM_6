@@ -116,7 +116,7 @@ qf(0.95, 3, 12)
 mean_MPG = aggregate(MPG ~ Make, data = data, mean)$MPG
 mean_MPG
 
-length = 4
+len= 4
 k = 1
 t_obs = array(0, dim = choose(len, 2))
 for (i in 1:(len-1)) {
@@ -133,5 +133,30 @@ data.frame(t_obs, decision)
 
 
 # =================
-# Question No - 05
+# Question No - 06
 # =================
+rm(list=ls())
+OrchardSprays
+attach(OrchardSprays)
+rowpos = as.factor(rowpos)
+colpos = as.factor(colpos)
+treatment = as.factor(treatment)
+anova_table= aov(decrease~ rowpos+colpos+treatment);anova_table
+summary(anova_table)
+qf(.95,7,42)
+yio.bar=aggregate(decrease~as.factor(treatment),data=OrchardSprays,mean)$decrease;yio.bar
+len=8;k=1;t_obs=array(0)
+for(i in 1:(len-1))
+  {
+  for(j in (i+1):len)
+    {
+    t_obs[k]=(yio.bar[i]-yio.bar[j])/sqrt(2*381/8)
+  k=k+1
+    }
+  }
+t_obs
+qt(.975,42)
+decision = ifelse(abs(t_obs)>qt(0.975,42),"Reject","Accept")
+data.frame(t_obs,decision)
+detach(OrchardSprays)
+
