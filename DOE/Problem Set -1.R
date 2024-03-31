@@ -145,7 +145,9 @@ anova_table= aov(decrease~ rowpos+colpos+treatment);anova_table
 summary(anova_table)
 qf(.95,7,42)
 yio.bar=aggregate(decrease~as.factor(treatment),data=OrchardSprays,mean)$decrease;yio.bar
-len=8;k=1;t_obs=array(0)
+len=8
+k=1
+t_obs=array(0)
 for(i in 1:(len-1))
   {
   for(j in (i+1):len)
