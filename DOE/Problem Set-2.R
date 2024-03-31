@@ -36,5 +36,5 @@ y03_bar = (736+574+594.66)/3 ; y03_bar
 MSE = 10286/5
 E_hat = (y01_bar - y03_bar) ; E_hat
 V_hat = MSE*((2/b)+(v/(b*(b-1)*(v-1)))) ; V_hat
-t = E_hat/sqrt(V_hat) ; t
+t = E_hat/sqrt(V_hat) ; t 
 
