@@ -1,6 +1,6 @@
-# ===============
-# Block no - 01
-# ===============
+# ==================
+# Question no - 01
+# ==================
 
 # Part - 1
 rm(list=ls())
@@ -37,4 +37,23 @@ MSE = 10286/5
 E_hat = (y01_bar - y03_bar) ; E_hat
 V_hat = MSE*((2/b)+(v/(b*(b-1)*(v-1)))) ; V_hat
 t = E_hat/sqrt(V_hat) ; t 
+
+
+# Part - 4
+Avg_variance = (6*(MSE/b) + 3*MSE*(2/b + v/(b*(v-1)*(b-1))))/6
+Avg_variance
+
+
+# ==================
+# Question no - 02
+# ==================
+
+# Part - 1
+rm(list=ls())
+feed = c("A", "B", "C", "D", "E", "B", "C", "D", "E", "A", "C", "D", "E", "A", "B", "D", "E", "A", "B", "C", "E", "A", "B", "C", "D")
+weight = c(30, 35, 47, 50, 38, 36, 42, 48, NA, 32, 41, 52, 40, 34, 38, 54, 40, 35, 34, 45, 40, 34, 38, 42, 50)
+model = aov(weight~feed)
+summary(model)
+
+
 
