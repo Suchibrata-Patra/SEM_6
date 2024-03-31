@@ -50,10 +50,23 @@ Avg_variance
 
 # Part - 1
 rm(list=ls())
-feed = c("A", "B", "C", "D", "E", "B", "C", "D", "E", "A", "C", "D", "E", "A", "B", "D", "E", "A", "B", "C", "E", "A", "B", "C", "D")
+v = 5
+row = c(rep(1,5),rep(2,5),rep(3,5),rep(4,5),rep(5,5))
+col = rep(seq(1,5,1),5)
+treatment = c("A", "B", "C", "D", "E", "B", "C", "D", "E", "A", "C", "D", "E", "A", "B", "D", "E", "A", "B", "C", "E", "A", "B", "C", "D")
 weight = c(30, 35, 47, 50, 38, 36, 42, 48, NA, 32, 41, 52, 40, 34, 38, 54, 40, 35, 34, 45, 40, 34, 38, 42, 50)
-model = aov(weight~feed)
+data = data.frame(row,col,treatment,weight)
+model = aov(weight~as.factor(row)+as.factor(col)+as.factor(treatment))
 summary(model)
+C_j = sum(na.omit(data$weight[col =="4"]))
+R_j = sum(na.omit(data$weight[row =="2"]))
+T_j = sum(na.omit(data$weight[treatment =="E"]))
+G = sum(na.omit(weight))
+x_hat = (v*(R_j+C_j+T_j) - (2*G))/((v-1)*(v-2))
 
+
+
+# Part - 2
+# Finding OUt whether it has Significant Treatment Effect or not
 
 
