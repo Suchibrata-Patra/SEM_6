@@ -147,19 +147,22 @@ qf(.95,7,42)
 yio.bar=aggregate(decrease~as.factor(treatment),data=OrchardSprays,mean)$decrease;yio.bar
 len=8
 k=1
+t_1 = array() ; t_2 = array()
 t_obs=array(0)
 for(i in 1:(len-1))
   {
   for(j in (i+1):len)
     {
     t_obs[k]=(yio.bar[i]-yio.bar[j])/sqrt(2*381/8)
-  k=k+1
+    t_1[k] = i
+    t_2[k] = j
+    k=k+1
     }
   }
 t_obs
 qt(.975,42)
 decision = ifelse(abs(t_obs)>qt(0.975,42),"Reject","Accept")
-data.frame(t_obs,decision)
+data.frame(treatment[t_1],treatment[t_2],t_obs,decision)
 detach(OrchardSprays)
 
 
