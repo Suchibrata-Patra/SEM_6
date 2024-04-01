@@ -31,3 +31,5 @@ summary(Chem.Pro.aov)
 names(Chem.Pro.aov)
 qf(0.95,1,30)
 
+#Question 
+
