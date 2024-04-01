@@ -28,6 +28,6 @@ Chemical.process = data.frame(data,Block,A,B,C,D)
 View(Chemical.process)
 Chem.Pro.aov = aov(data ~ Block+A*B*C*D,data=Chemical.process)
 summary(Chem.Pro.aov)
-
-
+names(Chem.Pro.aov)
+qf(0.95,1,30)
 
