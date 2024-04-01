@@ -30,5 +30,4 @@ Chem.Pro.aov = aov(data ~ Block+A*B*C*D,data=Chemical.process)
 summary(Chem.Pro.aov)
 names(Chem.Pro.aov)
 qf(0.95,1,30)
-just checking
 
