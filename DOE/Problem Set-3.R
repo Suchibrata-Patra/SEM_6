@@ -3,16 +3,15 @@
 # ==================
 rm(list=ls())
 virus_growth = c(21,22,23,28,20,26,25,26,24,25,29,27,37,39,38,38,35,36,31,34,29,33,30,35)
-time = rep(1:2,each=12)
-culture_medium = rep(rep(1:2,each=6),2)
+time= rep(c("12","18"),each=12)
+culture_medium = rep(rep(c("A","B"),each=6),2)
 data = data.frame(culture_medium, time, virus_growth)
 data$culture_medium = as.factor(data$culture_medium)
 data$time = as.factor(data$time)
 anova_results = aov(virus_growth ~time*culture_medium, data=data)
-
 summary(anova_results)
-
-
+qf(0.95,1,20)
+data
 
 # ==================
 # Question no - 02
