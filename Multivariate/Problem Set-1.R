@@ -1,6 +1,6 @@
-#==================
-# Question No - 01
-#==================
+#====================
+#  Question No - 01
+#====================
 rm(list=ls())
 no = seq(1,12,1)
 x1 = c(58.6,55.5,67.1,54.7,43.2,60.1,52.7,51.7,66.5,50.4,61.1,68.0)
@@ -10,23 +10,34 @@ x4 = c(60.0,73.0,69.0,60.5,57.0,43.0,55.5,61.5,46.0,52.5,57.5,47.0)
 data = data.frame(no,x1,x2,x3,x4)
 data
 model = lm(x1~x2+x3+x4) ; model
-summary(model)
-y = 30.3303 + (1.1220-0.5346-0.1858)*50 ; y
 
-# Question No - (d)
+
+# Either 
+summary(model)
+# OR
+estimate = predict(model)
 r1.234_square = var(estimate)/var(x1) ;r1.234_square
+
+y = 30.3303 + (1.1220-0.5346-0.1858)*50 ; y
 # r12.34
 e1.34 = resid(lm(x1~x3+x4))
 e2.34 = resid(lm(x2~x3+x4))
 r12.34 = cor(e1.34,e2.34) ;r12.34
-#r13.24
+# r13.24
 e1.24 = resid(lm(x1~x2+x4))
 e3.24 = resid(lm(x3~x2+x4))
 r13.24 = cor(e1.24,e3.24) ;r13.24
-#r14.23
+# r14.23
 e1.23 = resid(lm(x1~x2+x3))
 e4.23 = resid(lm(x4~x2+x3))
 r14.23 = cor(e1.23,e4.23) ;r14.23
+
 abs(r12.34)
 abs(r13.24)
 abs(r14.23)
+
+
+#====================
+#  Question No - 02
+#====================
+rm(list=ls())
