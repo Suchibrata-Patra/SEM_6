@@ -41,3 +41,23 @@ abs(r14.23)
 #  Question No - 02
 #====================
 rm(list=ls())
+data = c(1,0.365,0.526,0.518,0.547,0.365,1,0.243,0.266,0.307,0.526,0.243,1,
+         0.628,0.553,0.518,0.266,0.628,1,0.489,0.547,0.307,0.553,0.489,1)
+
+Matrix = matrix(data,nrow=5) ; Matrix
+
+minor_matrix = function(matrix_input, row_pos, col_pos) {
+  minor_matrix = matrix_input[-row_pos, -col_pos, drop = FALSE] 
+  return(minor_matrix)
+}
+input = matrix(1:9, nrow = 3, ncol = 3)
+row_pos = c(4,5) ; col_pos = c(4,5)
+R3_11 = minor_matrix(Matrix, row_pos, col_pos) ; R3_11
+row_pos = c(1,1) ; col_pos = c(1,1)
+R_11= minor_matrix(R3_11, row_pos, col_pos) ; R_11
+r1.23 = sqrt(1-det(R3_11)/det(R_11))
+r1.23
+
+
+
+
