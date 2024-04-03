@@ -11,7 +11,6 @@ data = data.frame(no,x1,x2,x3,x4)
 data
 model = lm(x1~x2+x3+x4) ; model
 
-
 # Either 
 summary(model)
 # OR
@@ -31,7 +30,6 @@ r13.24 = cor(e1.24,e3.24) ;r13.24
 e1.23 = resid(lm(x1~x2+x3))
 e4.23 = resid(lm(x4~x2+x3))
 r14.23 = cor(e1.23,e4.23) ;r14.23
-
 abs(r12.34)
 abs(r13.24)
 abs(r14.23)
@@ -45,12 +43,13 @@ data = c(1,0.365,0.526,0.518,0.547,0.365,1,0.243,0.266,0.307,0.526,0.243,1,
          0.628,0.553,0.518,0.266,0.628,1,0.489,0.547,0.307,0.553,0.489,1)
 
 Matrix = matrix(data,nrow=5) ; Matrix
-
 minor_matrix = function(matrix_input, row_pos, col_pos) {
   minor_matrix = matrix_input[-row_pos, -col_pos, drop = FALSE] 
   return(minor_matrix)
 }
-input = matrix(1:9, nrow = 3, ncol = 3)
+#Finding Out r.1
+r1.2 = 0.365
+#Finding out r1.23
 row_pos = c(4,5) ; col_pos = c(4,5)
 R3_11 = minor_matrix(Matrix, row_pos, col_pos) ; R3_11
 row_pos = c(1,1) ; col_pos = c(1,1)
@@ -58,6 +57,54 @@ R_11= minor_matrix(R3_11, row_pos, col_pos) ; R_11
 r1.23 = sqrt(1-det(R3_11)/det(R_11))
 r1.23
 
+#Finding out r1.234 
+row_pos = 5 ; col_pos = 5
+R4_11 = minor_matrix(Matrix, row_pos, col_pos) ; R4_11
+row_pos = 1 ; col_pos = 1
+R_11= minor_matrix(R4_11, row_pos, col_pos) ; R_11
+r1.234 = sqrt(1-det(R4_11)/det(R_11))
+r1.234
+
+#Finding out r1.2345
+row_pos = 1 ; col_pos = 1
+R_11= minor_matrix(Matrix, row_pos, col_pos) ; R_11
+r1.2345 = sqrt(1-det(Matrix)/det(R_11))
+r1.2345
+
+# Residual Variance 
+s1_sq = (9.82^2)
+v_e1.2 = s1_sq*(1-r1.2^2) ; v_e1.2
+v_e1.23 = s1_sq*((1-r1.23^2)) ; v_e1.23
+v_e1.234 = s1_sq*((1-r1.234^2)) ; v_e1.234
+v_e1.2345 = s1_sq*((1-r1.2345^2)) ; v_e1.234
 
 
 
+#====================
+#  Question No - 03
+#====================
+rm(list=ls())
+x = c(40,20,12,13,15)
+m = sum(x) ; m
+p = x/m
+estimate = (m- sum(x[2:4]))*(p[1]/(1-sum(p[2:4])))
+estimate
+
+roh_12_estimate = -sqrt((p[1]*p[2])/((p[2]+p[5])*(p[1]+p[5])))
+roh_12_estimate
+
+roh_1.234 = sqrt(1- ((1-p[1]*p[1])/(1-p[1])))
+roh_1.234
+
+pbinom(10,20,0.4)
+dbinom(10,20,0.4)
+
+
+x = c(8,4,2,1)
+m = 20 ; p = x/m
+n = m - sum(x[-1]) ; n
+p_star = p[1]/(1-sum(p[-1])) ; p_star
+dbinom(8,15,p_star)
+
+
+dmultinom(x, prob = p)
