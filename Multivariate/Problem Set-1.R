@@ -80,31 +80,4 @@ v_e1.2345 = s1_sq*((1-r1.2345^2)) ; v_e1.234
 
 
 
-#====================
-#  Question No - 03
-#====================
-rm(list=ls())
-x = c(40,20,12,13,15)
-m = sum(x) ; m
-p = x/m
-estimate = (m- sum(x[2:4]))*(p[1]/(1-sum(p[2:4])))
-estimate
 
-roh_12_estimate = -sqrt((p[1]*p[2])/((p[2]+p[5])*(p[1]+p[5])))
-roh_12_estimate
-
-roh_1.234 = sqrt(1- ((1-p[1]*p[1])/(1-p[1])))
-roh_1.234
-
-pbinom(10,20,0.4)
-dbinom(10,20,0.4)
-
-
-x = c(8,4,2,1)
-m = 20 ; p = x/m
-n = m - sum(x[-1]) ; n
-p_star = p[1]/(1-sum(p[-1])) ; p_star
-dbinom(8,15,p_star)
-
-
-dmultinom(x, prob = p)
