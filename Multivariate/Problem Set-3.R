@@ -18,3 +18,11 @@ T= (k-10)/sqrt(5);T
 tao= qnorm(0.975);tao
 
 binom.test(k,20,1/2)		
+
+#Question No - 04
+rm(list=ls())
+data = chickwts
+sample_size = 50
+names(data)
+s = sample(1:72,sample_size) ; s
+
