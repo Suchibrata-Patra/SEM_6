@@ -68,5 +68,47 @@ x_hat = (v*(R_j+C_j+T_j) - (2*G))/((v-1)*(v-2))
 
 # Part - 2
 # Finding OUt whether it has Significant Treatment Effect or not
+rm(list=ls())
+v = 5
+row = c(rep(1,5),rep(2,5),rep(3,5),rep(4,5),rep(5,5))
+col = rep(seq(1,5,1),5)
+x.hat = 35.8333
+treatments = c("A","B","C","D","E","B","C","D","E","A","C","D","E","A","B","D","E","A","B","C","E","A","B","C","D")
+weight = c(30,35,47,50,38,36,42,48,x.hat,32,41,52,40,34,38,54,40,35,34,45,40,34,38,42,50)
+model_1 = aov(weight~as.factor(row)+as.factor(col)+as.factor(treatments))
+summary(model_1)
+SSE_x.hat = 49.3 
 
+x.hat.hat = 38.4375
+weight_x.hat = c(30,35,47,50,38,36,42,48,x.hat.hat,32,41,52,40,34,38,54,40,35,34,45,40,34,38,42,50)
+model_2 = aov(weight_x.hat~as.factor(row)+as.factor(col))
+summary(model_2)
+
+SSE_HO_x.hat.hat = 1006.0 
+F = ((SSE_HO_x.hat.hat - SSE_x.hat)/(SSE_x.hat))*(11/4) ; F
+qf(0.95,4,11)
+
+MSE_x.hat = SSE_x.hat /((v-1)*(v-2)-1)
+V_Ti_Tj = MSE_x.hat*((2/v)+(1/((v-1)*(v-2))))
+
+data = data.frame(treatments,weight)
+yio.bar=aggregate(weight~as.factor(treatments),data=data,mean)$weight;yio.bar
+yio.bar_x.hat=aggregate(weight_x.hat~as.factor(treatments),data=data,mean)$weight;yio.bar
+t_obs = array(0);k=1;len=5
+t_1 = array(0)
+t_2 = array(0)
+for(i in 1:(len-1))
+  {
+    for(j in (i+1):len)
+      {
+  t_obs[k] = (yio.bar_x.hat[i] - yio.bar_x.hat[j])/sqrt(V_Ti_Tj)
+  t_1[k] = i 
+  t_2[k] = j
+  k=k+1
+    }
+  }
+t_obs
+qt(.975,15)
+decision=ifelse(abs(t_obs)>qt(0.975,15),"Reject","Accept")
+data.frame(t_1,t_2,t_obs,decision)
 
