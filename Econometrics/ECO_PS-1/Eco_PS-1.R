@@ -1,6 +1,7 @@
 # ===========================#
 # ==== Problem No - 01 ======#
-# ===========================#rm(list=ls())
+# ===========================#
+rm(list=ls())
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")
 attach(data)
 model = lm(GNP ~Money_Supply)
