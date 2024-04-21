@@ -19,10 +19,10 @@ before=c(10,16,7,4,7,2);after=c(18,19,11,3,5,3)
 d= before-after
 z=ifelse(d>0,1,0);z
 k=sum(z);k
-
 T= (k-3)/sqrt(6/4);T
 tao= qnorm(0.975);tao
 binom.test(k,6,1/2)	
+
 
 #======================#
 # Question No - 03
@@ -34,18 +34,17 @@ n1=length(x);n2=length(y);n=n1+n1
 comb=sort(c(x,y));comb
 W=sum(match(y,comb));W
 
+
 #======================#
 # Question No - 04
 #======================#
 rm(list=ls())
 attach(chickwts);chickwts
-rank=match(weight,sort(weight));rank
-rio.bar=aggregate(rank~as.factor(feed),data=chickwts,mean)$rank;rio.bar
+rank = match(weight,sort(weight));rank
+rio.bar = aggregate(rank~as.factor(feed),data=chickwts,mean)$rank;rio.bar
 ni=aggregate(rank~as.factor(feed),data=chickwts,length)$rank;ni
 n=sum(ni);mean=(n+1)/2;var=(n+1)*n/12
 Q= sum(ni*(rio.bar-mean)^2)/var;Q
-
-kruskal.test(weight,as.factor(feed))		#alternative
-
+kruskal.test(weight,as.factor(feed))	
 
 
