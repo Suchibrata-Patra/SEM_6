@@ -27,7 +27,16 @@ summary(model)
 plot(x,y,col="RED")
 
 
+#finding Standarised Residuals
+n = length(x)
+hii = (((x-mean(x))/sd(x))^2)*(1/(n-1)) + (1/n)
+sr = (predict(model)-y)/(sd(x)*sqrt(1-hii));sr
+standarised_residuals = rstandard(model)
+standarised_residuals
+
+plot(model)
 
 
-
+p = 1
+l0 = 3*(p+1)/n
 
