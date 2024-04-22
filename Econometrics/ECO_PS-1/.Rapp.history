@@ -1,5 +1,4 @@
 rm(list=ls())
-rm(list=ls())
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")
 attach(data)
 summary(model)
@@ -9,7 +8,6 @@ summary(model)
 attach(data)
 model = lm(GNP ~Money_Supply)
 summary(model)
-rm(list=ls())
 rm(list=ls())
 file.choose()
 data = read.csv(/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1_Qno_3.csv)
@@ -48,7 +46,6 @@ plot(data$CLFPRF,data$UNRF)#
 linear_regression = lm(data$CLFPRM~data$UNRM)#
 linear_regression
 summary(linear_regression)
-plot(CLFPRM,AHE82)
 plot(CLFPRM,AHE82)
 #Question No - 01#
 rm(list=ls())#
@@ -168,18 +165,6 @@ linear_regression = lm(CLFPRM~UNRM)#
 linear_regression#
 summary(linear_regression)#
 plot(AHE82,CLFPRM,type="l",col="RED")#
-#par(new=2)#
-line(AHE82,CLFPRF,type="l",col="GREEN")#
-detach(data)
-#Question No - 01#
-rm(list=ls())#
-data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1_Qno_1.csv")#
-attach(data)#
-plot(CLFPRF,UNRF)#
-linear_regression = lm(CLFPRM~UNRM)#
-linear_regression#
-summary(linear_regression)#
-plot(AHE82,CLFPRM,type="l",col="RED")#
 par(new=2)#
 plot(AHE82 ,CLFPRF,type="l",col="GREEN")#
 detach(data)
@@ -265,18 +250,6 @@ linear_regression = lm(CLFPRM~UNRM)#
 linear_regression#
 summary(linear_regression)#
 plot(AHE82,CLFPRM,col="RED")#
-par(mfrow=c(2,1))#
-plot(AHE82 ,CLFPRF,col="GREEN")#
-detach(data)
-#Question No - 01#
-rm(list=ls())#
-data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1_Qno_1.csv")#
-attach(data)#
-plot(CLFPRF,UNRF)#
-linear_regression = lm(CLFPRM~UNRM)#
-linear_regression#
-summary(linear_regression)#
-plot(AHE82,CLFPRM,col="RED")#
 par(mfrow=c(2,2))#
 plot(AHE82 ,CLFPRF,col="GREEN")#
 detach(data)
@@ -293,17 +266,9 @@ par(mfrow=c(1,2))#
 plot(AHE82,CLFPRF,col="GREEN")#
 detach(data)
 plot(AHE82,CLFPRM,col="RED")
-plot(AHE82,CLFPRM,col="RED")
-plot(AHE82,CLFPRM,col="RED")
 attach(data)
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1_Qno_1.csv")
 attach(data)
-detach(data)
-detach(data)
-detach(data)
-detach(data)
-detach(data)
-detach(data)
 detach(data)
 rm(list=ls())
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1_Qno_1.csv")
@@ -323,9 +288,6 @@ summary(linear_regression)#
 plot(AHE82,CLFPRM,col="RED")#
 par(mfrow=c(1,2))#
 plot(AHE82,CLFPRF,col="GREEN")#
-detach(data)
-detach(data)
-detach(data)
 detach(data)
 detach(data)
 rm(list=ls())
@@ -455,7 +417,6 @@ summary(linear_regression)
 plot(AHE82,CLFPRM,col="RED",main="CLFPRM")
 plot(CLFPRM, AHE82 ,col="RED",main="CLFPRM")
 AHE82
-AHE82
 plot(AHE82,CLFPRM,col="RED",main="CLFPRM")
 plot(AHE82,CLFPRF,col="GREEN",main="CLFPRMF")
 plot(AHE82,CLFPRM,col="RED",main="CLFPRM")
@@ -479,22 +440,6 @@ data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/
 file.choose()
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1_Qno_2.csv")
 file.choose()
-data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1 Qno_2.csv")
-#Question No - 01#
-rm(list=ls())#
-data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1_Qno_1.csv")#
-attach(data)#
-plot(CLFPRF,UNRF)#
-linear_regression = lm(CLFPRM~UNRM)#
-linear_regression#
-summary(linear_regression)#
-#
-par(mfrow=c(2,1))#
-plot(AHE82,CLFPRM,col="RED",main="CLFPRM")#
-plot(AHE82,CLFPRF,col="GREEN",main="CLFPRMF")#
-detach(data)#
-#Question No - 02#
-rm(list=ls())#
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-1/Ps-1 Qno_2.csv")
 #Question No - 01#
 rm(list=ls())#
@@ -542,12 +487,6 @@ attach(data)#
 model = lm(GNP~Money_Supply)#
 summary(model)#
 detach(data)
-rm(list=ls())#
-data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_1.csv")#
-attach(data)#
-model = lm(GNP~Money_Supply)#
-summary(model)#
-detach(data)
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")
 rm(list=ls())#
 data = read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-2/Ps-2_Qno_2.csv")#
@@ -565,7 +504,6 @@ model = lm(y~x)
 summary(model)
 model = lm(Y~X)
 summary(model)
-zi = 100/(100-Y)
 zi = 100/(100-Y)
 w = (1/X)
 z = 100/(100-Y)
