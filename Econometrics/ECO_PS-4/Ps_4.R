@@ -1,36 +1,59 @@
-#==================================================#
-#                Question No - 01                  #
-#==================================================#
 rm(list=ls())
-wages = c(8.4, 8.4, 8.6, 8.7, 8.9, 9.0,8.9, 9.1, 9.3, 9.3, 9.4, 9.6,9.5, 9.8, 9.9, 10.3, 10.3, 10.5,10.3, 10.6, 10.9, 11.3, 11.5, 11.7,11.6, 11.8, 12.1, 12.5, 12.7, 13.1)
-y = wages
-workers = rep(seq(100,500,100),each=6,by=6)
-x = workers
-model = lm(wages~workers)
+data=read.csv("/Users/suchibratapatra/Desktop/Practical/Econometrics/ECO_PS-4/Ps_4.csv");data
+attach(data)
+
+model= lm(y~x);model
 summary(model)
-plot(wages,workers)
-residuals = residuals(model)
-plot(residuals,fitted(model))
-abline(h=0,col="RED")
 
-ui = abs(resid(model))
-x1 = 1/x
-x2 = 1/sqrt(x)
-x3 = sqrt(x)
-x4 = x
-model1 = summary(lm(ui~x1)) ; model1
-model2 = summary(lm(ui~x2)) ; model2
-model3 = summary(lm(ui~x3)) ; model3
-model1 = summary(lm(ui~x4)) ; model1
+# run test 
+N1= sum(ifelse(u>0,1,0));N1
+N= length(u);N
+N2= N-N1;N2
+R=5		# total number of runs (find in minitab easily or do manually) 
 
-model.1  = summary(lm(y[1:10]~x[1:10])) ; model.1
-rss1 = 0.23
-model.2  = summary(lm(y[21:30]~x[21:30])) ; model.2
-rss2 = 0.4962
-F = rss2/rss1 ; F
-qf(0.95,8,8)
+mean= ((2*N1*N2)/N)+1;mean
+v= (2*N1*N2*(2*N1*N2-N))/(N*N*(N-1));v	test with interval
+u= mean+qnorm(0.975)*sqrt(v);u
+l= mean-qnorm(0.975)*sqrt(v);l
+# r lies outside 7the interval.. i.e. residuals are not random.. autocorrelation is present
+T= (R-mean)/sqrt(v);T		# test with statistics
+qnorm(0.975)
+#test statistic rejected...same interpretation 
 
-Y = y/x
-X = 1/x
-m = summary(lm(Y~X)) ; m
+#  durbin watson test statistics
 
+u= model$resid;u
+ut= u[-1];ut
+ut_1= u[1:45];ut_1
+d= sum((ut-ut_1)^2)/sum(u^2);d
+
+#	====== remedies =====
+
+yt=y[-1];yt
+yt_1= y[1:45];yt_1
+xt= x[-1];xt
+xt_1= x[1:45];xt_1
+
+# using durbin watson value
+ro.1 = 1-d/2;ro.1
+y1s= y[1]*sqrt(1- ro.1^2)
+ys= yt-ro.1*yt_1
+y.star= c(y1s,ys)
+x1s= x[1]*sqrt(1- ro.1^2)
+xs= xt-ro.1*xt_1
+x.star= c(x1s,xs)
+summary(lm(y.star~x.star))
+
+# using residuals
+summary(lm(ut~ut_1-1))
+ro= 0.88759
+y1s= y[1]*sqrt(1- ro^2)
+ys= yt-ro*yt_1
+y.star= c(y1s,ys)
+x1s= x[1]*sqrt(1- ro^2)
+xs= xt-ro*xt_1
+x.star= c(x1s,xs)
+summary(lm(y.star~x.star))
+
+
+detach(data)
